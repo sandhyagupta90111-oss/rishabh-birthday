@@ -1,43 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Our Beautiful Memories ❤️</title>
+<title>📸 Our Love Story ❤️</title>
 <link rel="stylesheet" href="style.css">
+
+<style>
+body{
+text-align:center;
+}
+
+.slideshow{
+max-width:400px;
+margin:auto;
+}
+
+.slideshow img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 20px gold;
+display:none;
+}
+
+.caption{
+font-size:24px;
+margin-top:20px;
+font-weight:bold;
+color:#ff4d6d;
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>📸 OUR MEMORIES ❤️</h1>
+<h1>📸 Our Love Story ❤️</h1>
 
 <p>
-Every picture tells a story...
-Every memory makes me smile...
-Every moment with you is precious.
-✨❤️✨
+Every picture tells a story... 💖
 </p>
+
+<!-- Background Music -->
+<audio autoplay loop controls>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
 
 <br><br>
 
-<div class="gallery">
+<div class="slideshow">
 
-<img src="photo1.jpg" alt="Memory 1">
-<img src="photo2.jpg" alt="Memory 2">
-<img src="photo3.jpg" alt="Memory 3">
-<img src="photo4.jpg" alt="Memory 4">
+<img class="slide" src="photo1.jpg">
+<img class="slide" src="photo2.jpg">
+<img class="slide" src="photo3.jpg">
+<img class="slide" src="photo4.jpg">
 
 </div>
 
-<br>
+<div class="caption" id="caption">
+❤️ The Day You Became My Favorite Person ❤️
+</div>
+
+<br><br>
 
 <a href="voice.html" class="btn">
-🎙️ Hear Something Special
+🎙 Continue
 </a>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+
+let slides = document.querySelectorAll(".slide");
+
+let captions = [
+
+"❤️ The Day You Became My Favorite Person ❤️",
+
+"🥰 Every Moment With You Is Special",
+
+"💖 My Heart Smiles Because Of You",
+
+"✨ Forever Starts With You"
+
+];
+
+let current = 0;
+
+function showSlides(){
+
+slides.forEach(slide=>{
+slide.style.display="none";
+});
+
+slides[current].style.display="block";
+
+document.getElementById("caption").innerHTML =
+captions[current];
+
+current++;
+
+if(current >= slides.length){
+current = 0;
+}
+
+}
+
+showSlides();
+
+setInterval(showSlides,4000);
+
+</script>
 
 </body>
 </html>

@@ -51,6 +51,60 @@ Forever Yours,
 
 </p>
 
+<br>
+
+<button class="btn" onclick="showCake(); this.style.display='none';">
+🎁 Open Your Birthday Gift
+</button>
+
+<div id="cake" style="display:none;">
+
+<h1 style="font-size:120px;">
+🎂🎉🎂
+</h1>
+
+<h2>
+💖 Surprise! 💖
+</h2>
+
+<h2>
+Happy Birthday My Love ❤️
+</h2>
+
+<p>
+May your smile always shine brighter than the candles on this cake! 🎉
+</p>
+
+<p>
+🎁 You Unlocked:
+<br><br>
+💋 Unlimited Birthday Kisses
+<br>
+🤗 Unlimited Hugs
+<br>
+❤️ Sandhya's Heart Forever
+<br>
+🎂 A Lifetime of Love & Happiness
+</p>
+
+<button class="btn" onclick="showSecret()">
+💌 One Last Secret
+</button>
+
+<div id="secret" style="display:none; margin-top:20px;">
+<h3>❤️ A Secret Message For Rishabh ❤️</h3>
+
+<p>
+I Love You Forever ❤️<br>
+You are so special to me.<br>
+Thank you for always being there for me.<br>
+No matter what happens, you'll always have a special place in my heart. 💖<br><br>
+
+Love You 3000 ❤️
+</p>
+
+</div>
+
 </div>
 
 <br>
@@ -68,6 +122,19 @@ box-shadow:0 0 30px gold;
 <h2>🎂 Enjoy Your Special Day 🎂</h2>
 
 </div>
+
+<script>
+function showCake(){
+document.getElementById("cake").style.display="block";
+}
+
+function showSecret(){
+document.getElementById("secret").style.display="block";
+}
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>
+
+

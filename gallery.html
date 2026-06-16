@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>📸 Our Love Story ❤️</title>
 <link rel="stylesheet" href="style.css">
-<audio controls autoplay loop>
-  <source src="song.mp3.ogg" type="audio/mpeg">
-</audio>
+
 <style>
-body{
-text-align:center;
-}
-
-.slideshow{
-max-width:400px;
-margin:auto;
-}
-
 .slideshow img{
-width:100%;
+width:320px;
 border-radius:20px;
 box-shadow:0 0 20px gold;
 display:none;
+margin:auto;
 }
 
 .caption{
-font-size:24px;
+font-size:22px;
 margin-top:20px;
 font-weight:bold;
-color:#ff4d6d;
 }
 </style>
+
 </head>
 
 <body>
@@ -39,12 +30,14 @@ color:#ff4d6d;
 <h1>📸 Our Love Story ❤️</h1>
 
 <p>
-Every picture tells a story... 💖
+Every picture tells a beautiful story... 💖
 </p>
 
-<!-- Background Music -->
-<audio autoplay loop controls>
-<source src="song.mp3.ogg" type="audio/mpeg">
+<h3>🎵 Play Our Special Song ❤️</h3>
+
+<audio controls loop>
+<source src="song.ogg" type="audio/ogg">
+Your browser does not support audio.
 </audio>
 
 <br><br>
@@ -52,9 +45,9 @@ Every picture tells a story... 💖
 <div class="slideshow">
 
 <img class="slide" src="photo1.jpg">
-<img class="slide" src="photo2.jpg">
 <img class="slide" src="photo3.jpg">
 <img class="slide" src="photo4.jpg">
+<img class="slide" src="photo1.jpg">
 
 </div>
 
@@ -75,15 +68,10 @@ Every picture tells a story... 💖
 let slides = document.querySelectorAll(".slide");
 
 let captions = [
-
 "❤️ The Day You Became My Favorite Person ❤️",
-
 "🥰 Every Moment With You Is Special",
-
 "💖 My Heart Smiles Because Of You",
-
 "✨ Forever Starts With You"
-
 ];
 
 let current = 0;

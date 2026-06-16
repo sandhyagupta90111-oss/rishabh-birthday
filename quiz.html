@@ -4,41 +4,181 @@
 <title>Love Quiz ❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
-
-<h1>💕 LOVE QUIZ 💕</h1>
-
+<h1>💕 Rishabh's Birthday Love Quiz 💕</h1>
 <p>
-Welcome Birthday Boy ❤️
+⚠️ Warning:
+This quiz may cause excessive smiling,
+blushing, and feelings of being loved. ❤️
 </p>
+<div class="card">
+<h2>Question 1 ❤️</h2>
+<p>Who loves Rishabh the most in the entire universe?</p>
 
-<p>
-Who loves Rishabh the most?
-</p>
+<button onclick="correct(this)">Rishabh ❤️</button>
+<button onclick="wrong()">Aliens 👽</button>
+<button onclick="wrong()">Nobody 😢</button>
+</div>
 
-<button class="btn" onclick="correctAnswer()">
-Sandhya ❤️
+<div class="card">
+<h2>Question 2 😘</h2>
+<p>Who is Sandhya's favorite person?</p>
+
+<button onclick="correct(this)">Rishabh ❤️</button>
+<button onclick="wrong()">A Celebrity 😆</button>
+<button onclick="wrong()">Her Neighbor 😂</button>
+</div>
+
+<div class="card">
+<h2>Question 3 🎂</h2>
+<p>Who deserves the biggest birthday cake today?</p>
+
+<button onclick="correct(this)">Rishabh ❤️</button>
+<button onclick="wrong()">The Cake Itself 🍰</button>
+<button onclick="wrong()">Nobody 😜</button>
+</div>
+
+<div class="card">
+<h2>Question 4 🤗</h2>
+<p>Who gives the best hugs?</p>
+
+<button onclick="correct(this)">Rishabh ❤️</button>
+<button onclick="wrong()">A Teddy Bear 🧸</button>
+<button onclick="wrong()">The Pillow 😴</button>
+</div>
+
+<div class="card">
+<h2>Question 5 💕</h2>
+<p>If Sandhya misses someone, who is it?</p>
+
+<button onclick="correct(this)">Rishabh ❤️</button>
+<button onclick="wrong()">Pizza 🍕</button>
+<button onclick="wrong()">The Moon 🌙</button>
+</div>
+
+<div class="card">
+<h2>Question 6 😍</h2>
+<p>Who has the cutest smile?</p>
+
+<button onclick="correct(this)">Rishabh ❤️</button>
+<button onclick="wrong()">A Penguin 🐧</button>
+<button onclick="wrong()">A Potato 🥔</button>
+</div>
+
+<div class="card">
+<h2>Question 7 💋</h2>
+<p>What does Rishabh unlock after getting all answers right?</p>
+
+<button onclick="correct(this)">Birthday Kisses 😘</button>
+<button onclick="wrong()">Homework 📚</button>
+<button onclick="wrong()">Laundry 🧺</button>
+</div>
+
+<div class="card">
+<h2>Question 8 👑</h2>
+<p>Who is today's Birthday King?</p>
+
+<button onclick="correct(this)">Rishabh 👑</button>
+<button onclick="wrong()">The Cat 🐱</button>
+<button onclick="wrong()">The Mailman 📮</button>
+</div>
+
+<h2 id="result"></h2>
+
+<button id="rewardBtn"
+class="btn"
+style="display:none;"
+onclick="showReward()">
+🎁 Claim Your Reward
 </button>
-<button class="btn" onclick="correctAnswer()">
-EX ❤️
-</button>
-<p id="result"></p>
 
-<script>
-function correctAnswer() {
-  document.getElementById("result").innerHTML =
-  "🎉 Correct! Sandhya loves Rishabh the most ❤️";
-}
-</script>
-<br><br>
+<br>
 
-<a href="surprise.html" class="btn">
-🎁 Continue
+<a href="surprise.html"
+class="btn"
+id="finalBtn"
+style="display:none;">
+🎁 Go To Final Surprise
 </a>
+<script>
 
+let score = 0;
+
+function correct(btn){
+
+if(btn.disabled) return;
+
+btn.disabled = true;
+
+score++;
+
+document.getElementById("result").innerHTML =
+"❤️ Correct! Score: " + score + "/8";
+
+if(score >= 8){
+
+document.getElementById("finalBtn").style.display =
+"inline-block";
+
+document.getElementById("result").innerHTML =
+"🎉 Perfect Score! Birthday Boy Wins! 🎉";
+}
+}
+score++;
+
+document.getElementById("result").innerHTML =
+"❤️ Correct! Score: " + score + "/8";
+
+if(score >= 8){
+
+document.getElementById("rewardBtn").style.display =
+"inline-block";
+
+document.getElementById("result").innerHTML =
+"🎉 Perfect Score! Birthday Boy Wins! 🎉";
+}
+}
+
+function wrong(){
+
+const messages = [
+
+"😜 Nope! Try again Birthday Boy!",
+"😂 Sandhya disagrees!",
+"🙈 Wrong answer!",
+"💕 Think with your heart!"
+];
+
+let random =
+messages[Math.floor(Math.random()*messages.length)];
+
+document.getElementById("result").innerHTML =
+random;
+}
+
+function showReward(){
+
+document.getElementById("reward").innerHTML =
+
+"<h1>😘 💋 😘 💋 😘 💋 😘</h1>" +
+
+"<h2>Congratulations Rishabh ❤️</h2>" +
+
+"<p>You unlocked:</p>" +
+
+"<p>🤗 Unlimited Hugs</p>" +
+
+"<p>💋 Birthday Kisses</p>" +
+
+"<p>❤️ Sandhya's Heart Forever</p>" +
+
+"<p>🎂 Happy Birthday My Love ❤️</p>";
+
+}
+
+</script>
 </div>
 
 <script src="script.js"></script>

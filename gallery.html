@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <title>📸 Our Love Story ❤️</title>
+
 <link rel="stylesheet" href="style.css">
 
 <style>
-.slideshow img{
+
+body{
+text-align:center;
+background:linear-gradient(135deg,#e6f7ff,#ffffff);
+font-family:Arial,sans-serif;
+}
+
+.container{
+padding:20px;
+}
+
+h1{
+color:#ff4d6d;
+}
+
+.slideshow{
+margin-top:20px;
+}
+
+.slide{
 width:320px;
-border-radius:20px;
-box-shadow:0 0 20px gold;
+height:auto;
+border-radius:25px;
+border:5px solid gold;
+box-shadow:0 0 25px gold;
 display:none;
-margin:auto;
 }
 
 .caption{
-font-size:22px;
 margin-top:20px;
+font-size:24px;
 font-weight:bold;
+color:#ff4d6d;
+min-height:60px;
 }
+
+audio{
+margin-top:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:gold;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+margin-top:25px;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
 </style>
 
 </head>
@@ -33,16 +75,22 @@ font-weight:bold;
 Every picture tells a beautiful story... 💖
 </p>
 
-<h3>🎵 Play Our Special Song ❤️</h3>
+<h3>🎵 Our Special Song 🎵</h3>
 
-<audio controls loop>
+<audio id="bgMusic" controls loop>
 <source src="song.ogg" type="audio/ogg">
-Your browser does not support audio.
 </audio>
 
 <br><br>
 
+<button class="btn"
+onclick="document.getElementById('bgMusic').play()">
+💖 Start Our Song
+</button>
+
 <div class="slideshow">
+
+<br>
 
 <img class="slide" src="photo1.jpg">
 <img class="slide" src="photo3.jpg">
@@ -55,10 +103,18 @@ Your browser does not support audio.
 ❤️ The Day You Became My Favorite Person ❤️
 </div>
 
-<br><br>
+<br>
+
+<p>
+✨ Sandhya & Rishabh ✨
+<br>
+❤️ Together Forever ❤️
+</p>
+
+<br>
 
 <a href="voice.html" class="btn">
-🎙 Continue
+🎙 Continue To Next Surprise
 </a>
 
 </div>
@@ -68,10 +124,15 @@ Your browser does not support audio.
 let slides = document.querySelectorAll(".slide");
 
 let captions = [
+
 "❤️ The Day You Became My Favorite Person ❤️",
+
 "🥰 Every Moment With You Is Special",
+
 "💖 My Heart Smiles Because Of You",
-"✨ Forever Starts With You"
+
+"✨ Forever Starts With You ❤️"
+
 ];
 
 let current = 0;

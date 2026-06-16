@@ -39,3 +39,28 @@ function createHeart() {
 }
 
 setInterval(createHeart, 600);
+function createBalloon() {
+  const balloon = document.createElement("div");
+  balloon.innerHTML = "🎈";
+  balloon.style.position = "fixed";
+  balloon.style.left = Math.random() * 100 + "vw";
+  balloon.style.bottom = "-50px";
+  balloon.style.fontSize = "40px";
+  balloon.style.zIndex = "999";
+
+  document.body.appendChild(balloon);
+
+  let pos = -50;
+
+  const move = setInterval(() => {
+    pos += 2;
+    balloon.style.bottom = pos + "px";
+
+    if (pos > window.innerHeight + 100) {
+      clearInterval(move);
+      balloon.remove();
+    }
+  }, 20);
+}
+
+setInterval(createBalloon, 3000);

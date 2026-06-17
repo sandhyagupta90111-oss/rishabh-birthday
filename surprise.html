@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Final Surprise ❤️</title>
 <link rel="stylesheet" href="style.css">
@@ -7,11 +8,14 @@
 
 <body>
 
+<h2 id="typing"></h2>
+
 <div class="container">
 
-<h1>🎉 HAPPY BIRTHDAY Jaan 🎉</h1>
+<!-- Your content starts here -->
 
 <h2>06 JULY ❤️</h2>
+
 
 <div class="card">
 
@@ -56,13 +60,21 @@ Forever Yours,
 <button class="btn" onclick="showCake(); this.style.display='none';">
 🎁 Open Your Birthday Gift
 </button>
+<br>
 
+<button class="btn" onclick="showLoveNote()">
+💌 Open Secret Love Note
+</button>
+
+<p id="loveNote"></p>
+  
 <div id="cake" style="display:none;">
 
 <h1 style="font-size:120px;">
 🎂🎉🎂
 </h1>
 
+<h2 id="countdown"></h2>
 <h2>
 💖 Surprise! 💖
 </h2>
@@ -124,16 +136,111 @@ box-shadow:0 0 30px gold;
 </div>
 
 <script>
+
 function showCake(){
+
 document.getElementById("cake").style.display="block";
+
+birthdayCountdown();
+
 }
 
 function showSecret(){
-document.getElementById("secret").style.display="block";
-}
-</script>
 
-<script src="script.js"></script>
+document.getElementById("secret").style.display="block";
+
+}
+
+function showLoveNote(){
+
+let notes = [
+
+"❤️ You are my favorite notification.",
+"🥰 Every day with you is special.",
+"💖 Thank you for being my happiness.",
+"😘 My heart smiles because of you.",
+"🌎 Out of everyone, I choose you.",
+"❤️ Rishu, you make my world brighter.",
+"💋 Sending you unlimited birthday kisses."
+
+];
+
+let random =
+notes[Math.floor(Math.random()*notes.length)];
+
+document.getElementById("loveNote").innerHTML =
+random;
+
+}
+
+let count = 5;
+
+function birthdayCountdown(){
+
+let timer = setInterval(function(){
+
+document.getElementById("countdown").innerHTML =
+"🎉 Surprise Unlocking In " + count;
+
+count--;
+
+if(count < 0){
+
+clearInterval(timer);
+
+document.getElementById("countdown").innerHTML =
+"💖 Love Unlocked Forever 💖";
+
+}
+
+},1000);
+
+}
+
+let text = "❤️ Happy Birthday My Love ❤️";
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("typing").innerHTML +=
+text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,100);
+
+}
+
+}
+
+typeWriter();
+
+</script>
+<h2>❤️ Love Meter ❤️</h2>
+
+<div style="
+width:300px;
+height:30px;
+background:#ddd;
+margin:auto;
+border-radius:20px;
+overflow:hidden;
+">
+
+<div style="
+width:100%;
+height:100%;
+background:hotpink;
+color:white;
+font-weight:bold;
+line-height:30px;
+">
+100% FOREVER ❤️
+</div>
+
+</div>
 </body>
 </html>
 

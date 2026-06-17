@@ -8,18 +8,51 @@
 
 body{
 text-align:center;
-background:linear-gradient(135deg,#fef6e4,#ffffff);
+background:linear-gradient(
+135deg,
+#ffe5ec,
+#fff0d9,
+#e0f7ff
+);
 font-family:Arial,sans-serif;
 padding:20px;
 }
 
 .music-card{
-background:black;
-padding:20px;
-border-radius:22px;
-width:200px;
-margin:auto;
-box-shadow:0 0 20px gold;
+width:700px;
+max-width:90%;
+margin:30px auto;
+padding:25px;
+background:white;
+border-radius:50px;
+box-shadow:0 0 25px rgba(255,215,0,.5);
+}
+
+.music-card h2{
+color:#ff4d88;
+margin-bottom:20px;
+}
+
+.player{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.music-btn{
+background:linear-gradient(45deg,gold,#ffcc00);
+border:none;
+padding:15px 25px;
+border-radius:40px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.music-btn:hover{
+transform:scale(1.05);
 }
 
 .vinyl{
@@ -37,43 +70,11 @@ from{transform:rotate(0deg);}
 to{transform:rotate(360deg);}
 }
 
-.music-btn{
-background:gold;
-border:none;
-padding:10px 20px;
-border-radius:25px;
-font-size:15px;
-cursor:pointer;
+#musicStatus{
+color:#ff4d88;
 font-weight:bold;
 }
 
-.slide{
-width:200px;
-border-radius:22px;
-border:3px solid gold;
-box-shadow:0 0 20px gold;
-display:none;
-margin:auto;
-}
-
-.caption{
-margin-top:20px;
-font-size:22px;
-font-weight:bold;
-color:#ff4d6d;
-min-height:50px;
-}
-
-.btn{
-display:inline-block;
-padding:10px 20px;
-background:gold;
-color:black;
-text-decoration:none;
-border-radius:20px;
-font-weight:bold;
-margin-top:20px;
-}
 
 </style>
 </head>
@@ -88,24 +89,29 @@ margin-top:20px;
 
 <h2>🎵 I always love you like this song 🎵</h2>
 
+<div class="music-card">
+
+<h2>🎵 Special Song For You ❤️</h2>
+
+<div class="player">
+
 <div class="vinyl">💿</div>
-
-<audio id="bgMusic">
-<source src="song.ogg" type="audio/ogg">
-</audio>
-
-<br><br>
 
 <button class="music-btn" onclick="toggleMusic()">
 ▶️ Play Song
 </button>
 
 <p id="musicStatus">
-❤️ Music Waiting For You...
+❤️ Music Waiting...
 </p>
 
 </div>
 
+<audio id="bgMusic">
+<source src="song.ogg" type="audio/ogg">
+</audio>
+
+</div>
 <br><br>
 
 <img class="slide" src="photo1.jpg">

@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>📸 First trip Banaras ❤️</title>
-<link rel="stylesheet" href="style.css">
 
 <style>
 
@@ -16,47 +15,37 @@ background:linear-gradient(
 );
 font-family:Arial,sans-serif;
 padding:20px;
+margin:0;
+}
+
+h1{
+color:#ff4d88;
 }
 
 .music-card{
-width:700px;
-max-width:90%;
+width:90%;
+max-width:650px;
 margin:30px auto;
 padding:25px;
 background:white;
-border-radius:50px;
+border-radius:40px;
 box-shadow:0 0 25px rgba(255,215,0,.5);
 }
 
 .music-card h2{
 color:#ff4d88;
-margin-bottom:20px;
 }
 
 .player{
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 gap:20px;
 flex-wrap:wrap;
 }
 
-.music-btn{
-background:linear-gradient(45deg,gold,#ffcc00);
-border:none;
-padding:15px 25px;
-border-radius:40px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-}
-
-.music-btn:hover{
-transform:scale(1.05);
-}
-
 .vinyl{
-font-size:60px;
+font-size:70px;
 animation:spin 4s linear infinite;
 animation-play-state:paused;
 }
@@ -70,11 +59,71 @@ from{transform:rotate(0deg);}
 to{transform:rotate(360deg);}
 }
 
+.music-btn{
+background:linear-gradient(45deg,gold,#ffcc00);
+border:none;
+padding:15px 25px;
+border-radius:40px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
 #musicStatus{
 color:#ff4d88;
 font-weight:bold;
 }
 
+.slideshow{
+display:flex;
+justify-content:center;
+align-items:center;
+margin:30px auto;
+min-height:450px;
+}
+
+.slide{
+display:none;
+width:320px;
+height:420px;
+object-fit:cover;
+border-radius:25px;
+border:5px solid gold;
+box-shadow:0 0 25px gold;
+}
+
+.caption{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+color:#ff4d88;
+min-height:60px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:gold;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+box-shadow:0 0 15px gold;
+margin-top:20px;
+}
+
+@media(max-width:600px){
+
+.slide{
+width:260px;
+height:340px;
+}
+
+.music-card{
+width:95%;
+}
+
+}
 
 </style>
 </head>
@@ -88,10 +137,6 @@ font-weight:bold;
 <div class="music-card">
 
 <h2>🎵 I always love you like this song 🎵</h2>
-
-<div class="music-card">
-
-<h2>🎵 Special Song For You ❤️</h2>
 
 <div class="player">
 
@@ -112,7 +157,6 @@ font-weight:bold;
 </audio>
 
 </div>
-<br><br>
 
 <div class="slideshow">
 
@@ -125,8 +169,6 @@ font-weight:bold;
 <div class="caption" id="caption">
 ❤️ The Day You Became My Favorite Person ❤️
 </div>
-
-<br>
 
 <p>
 ✨ Sanjh ❤️ Rishabh ✨
@@ -176,11 +218,8 @@ let slides = document.querySelectorAll(".slide");
 let captions = [
 
 "❤️ The Day You Became My Favorite Person ❤️",
-
 "🥰 Every Moment With You Is Special",
-
 "💖 My Heart Smiles Because Of You",
-
 "✨ Forever Starts With You ❤️"
 
 ];

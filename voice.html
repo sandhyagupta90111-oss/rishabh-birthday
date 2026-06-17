@@ -1,42 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Message From Sanjh ❤️</title>
-<link rel="stylesheet" href="style.css">
+<title>🎙️ A Message From Sanjh ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffe5ec,#fff0d9,#e0f7ff);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+text-align:center;
+padding:20px;
+}
+
+.container{
+max-width:800px;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 0 30px rgba(255,105,180,.4);
+}
+
+h1{
+color:#ff4d88;
+font-size:3rem;
+margin-bottom:20px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+.mic{
+font-size:90px;
+animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+.message{
+font-size:22px;
+line-height:1.8;
+color:#444;
+margin:25px 0;
+}
+
+audio{
+width:100%;
+max-width:500px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:gold;
+color:black;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+font-size:18px;
+box-shadow:0 0 15px gold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.heart{
+font-size:40px;
+margin-top:20px;
+animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+0%{transform:scale(1);}
+25%{transform:scale(1.2);}
+50%{transform:scale(1);}
+75%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>🎙️ A Message From My Heart ❤️</h1>
-
 <div class="card">
 
-<p>
-Rishu,
+<div class="mic">🎙️</div>
 
-Before you continue your birthday journey,
+<h1>A Message From My Heart ❤️</h1>
+
+<p class="message">
+
+Rishu ❤️,
+
+Before you continue your birthday journey...
+
 I want you to hear something special.
 
 This message comes straight from my heart.
-❤️
-</p>
 
-<br>
+No matter where life takes us,
+you will always be someone very special to me. 💖
+
+Press play and listen carefully... ❤️
+
+</p>
 
 <audio controls>
 <source src="voice.mp3" type="audio/mpeg">
 Your browser does not support audio.
 </audio>
 
-</div>
+<div class="heart">❤️</div>
 
 <a href="surprise.html" class="btn">
 🎁 Open Final Surprise
 </a>
-  
+
 </div>
-<script src="script.js"></script>
+
+</div>
+
 </body>
 </html>

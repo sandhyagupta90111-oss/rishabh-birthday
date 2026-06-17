@@ -2,36 +2,58 @@
 <html>
 <head>
 <title>📸 Our Love Story ❤️</title>
-
 <link rel="stylesheet" href="style.css">
 
 <style>
 
 body{
 text-align:center;
-background:linear-gradient(135deg,#e6f7ff,#ffffff);
+background:linear-gradient(135deg,#fef6e4,#ffffff);
 font-family:Arial,sans-serif;
-}
-
-.container{
 padding:20px;
 }
 
-h1{
-color:#ff4d6d;
+.music-card{
+background:white;
+padding:25px;
+border-radius:25px;
+width:340px;
+margin:auto;
+box-shadow:0 0 30px gold;
 }
 
-.slideshow{
-margin-top:20px;
+.vinyl{
+font-size:90px;
+animation:spin 4s linear infinite;
+animation-play-state:paused;
+}
+
+.vinyl.playing{
+animation-play-state:running;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+.music-btn{
+background:gold;
+border:none;
+padding:12px 25px;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+font-weight:bold;
 }
 
 .slide{
 width:320px;
-height:auto;
 border-radius:25px;
 border:5px solid gold;
 box-shadow:0 0 25px gold;
 display:none;
+margin:auto;
 }
 
 .caption{
@@ -40,10 +62,6 @@ font-size:24px;
 font-weight:bold;
 color:#ff4d6d;
 min-height:60px;
-}
-
-audio{
-margin-top:20px;
 }
 
 .btn{
@@ -57,47 +75,43 @@ font-weight:bold;
 margin-top:25px;
 }
 
-.btn:hover{
-transform:scale(1.05);
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-
 <h1>📸 Our Love Story ❤️</h1>
 
-<p>
-Every picture tells a beautiful story... 💖
-</p>
+<p>Every picture tells a beautiful story... 💖</p>
 
-<h3>🎵 Our Special Song 🎵</h3>
+<div class="music-card">
 
-<audio id="bgMusic" controls loop>
+<h2>🎵 Our Special Song 🎵</h2>
+
+<div class="vinyl">💿</div>
+
+<audio id="bgMusic">
 <source src="song.ogg" type="audio/ogg">
 </audio>
 
 <br><br>
 
-<button class="btn"
-onclick="document.getElementById('bgMusic').play()">
-💖 Start Our Song
+<button class="music-btn" onclick="toggleMusic()">
+▶️ Play Our Song
 </button>
 
-<div class="slideshow">
+<p id="musicStatus">
+❤️ Music Waiting For You...
+</p>
 
-<br>
+</div>
+
+<br><br>
 
 <img class="slide" src="photo1.jpg">
 <img class="slide" src="photo3.jpg">
 <img class="slide" src="photo4.jpg">
 <img class="slide" src="photo1.jpg">
-
-</div>
 
 <div class="caption" id="caption">
 ❤️ The Day You Became My Favorite Person ❤️
@@ -106,20 +120,47 @@ onclick="document.getElementById('bgMusic').play()">
 <br>
 
 <p>
-✨ Sandhya & Rishabh ✨
+✨ Sanjh ❤️ Rishabh ✨
 <br>
-❤️ Together Forever ❤️
+Forever & Always 💖
 </p>
-
-<br>
 
 <a href="voice.html" class="btn">
 🎙 Continue To Next Surprise
 </a>
 
-</div>
-
 <script>
+
+let music = document.getElementById("bgMusic");
+let vinyl = document.querySelector(".vinyl");
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+vinyl.classList.add("playing");
+
+document.querySelector(".music-btn").innerHTML =
+"⏸ Pause Song";
+
+document.getElementById("musicStatus").innerHTML =
+"💖 Playing Our Love Song...";
+
+}else{
+
+music.pause();
+vinyl.classList.remove("playing");
+
+document.querySelector(".music-btn").innerHTML =
+"▶️ Play Our Song";
+
+document.getElementById("musicStatus").innerHTML =
+"❤️ Music Paused";
+
+}
+
+}
 
 let slides = document.querySelectorAll(".slide");
 

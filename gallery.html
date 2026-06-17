@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>📸 Our Love Story ❤️</title>
+<title>📸 First trip Banaras ❤️</title>
 <link rel="stylesheet" href="style.css">
 
 <style>
@@ -14,16 +14,16 @@ padding:20px;
 }
 
 .music-card{
-background:white;
-padding:25px;
-border-radius:25px;
-width:340px;
+background:black;
+padding:20px;
+border-radius:22px;
+width:200px;
 margin:auto;
-box-shadow:0 0 30px gold;
+box-shadow:0 0 20px gold;
 }
 
 .vinyl{
-font-size:90px;
+font-size:60px;
 animation:spin 4s linear infinite;
 animation-play-state:paused;
 }
@@ -40,39 +40,39 @@ to{transform:rotate(360deg);}
 .music-btn{
 background:gold;
 border:none;
-padding:12px 25px;
-border-radius:30px;
-font-size:18px;
+padding:10px 20px;
+border-radius:25px;
+font-size:15px;
 cursor:pointer;
 font-weight:bold;
 }
 
 .slide{
-width:320px;
-border-radius:25px;
-border:5px solid gold;
-box-shadow:0 0 25px gold;
+width:200px;
+border-radius:22px;
+border:3px solid gold;
+box-shadow:0 0 20px gold;
 display:none;
 margin:auto;
 }
 
 .caption{
 margin-top:20px;
-font-size:24px;
+font-size:22px;
 font-weight:bold;
 color:#ff4d6d;
-min-height:60px;
+min-height:50px;
 }
 
 .btn{
 display:inline-block;
-padding:12px 25px;
+padding:10px 20px;
 background:gold;
 color:black;
 text-decoration:none;
-border-radius:30px;
+border-radius:20px;
 font-weight:bold;
-margin-top:25px;
+margin-top:20px;
 }
 
 </style>
@@ -80,13 +80,13 @@ margin-top:25px;
 
 <body>
 
-<h1>📸 Our Love Story ❤️</h1>
+<h1>📸 Our moments ❤️</h1>
 
 <p>Every picture tells a beautiful story... 💖</p>
 
 <div class="music-card">
 
-<h2>🎵 Our Special Song 🎵</h2>
+<h2>🎵 I always love you like this song 🎵</h2>
 
 <div class="vinyl">💿</div>
 
@@ -97,7 +97,7 @@ margin-top:25px;
 <br><br>
 
 <button class="music-btn" onclick="toggleMusic()">
-▶️ Play Our Song
+▶️ Play Song
 </button>
 
 <p id="musicStatus">
@@ -145,7 +145,7 @@ document.querySelector(".music-btn").innerHTML =
 "⏸ Pause Song";
 
 document.getElementById("musicStatus").innerHTML =
-"💖 Playing Our Love Song...";
+"💖 Playing Love Song...";
 
 }else{
 
@@ -153,7 +153,7 @@ music.pause();
 vinyl.classList.remove("playing");
 
 document.querySelector(".music-btn").innerHTML =
-"▶️ Play Our Song";
+"▶️ Play Song";
 
 document.getElementById("musicStatus").innerHTML =
 "❤️ Music Paused";

@@ -1,60 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>A Letter For You ❤️</title>
-<link rel="stylesheet" href="style.css">
+<title>💌 Love Letter</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#fff0f5,#ffe4e1);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+width:90%;
+max-width:700px;
+}
+
+.envelope{
+font-size:180px;
+cursor:pointer;
+transition:0.5s;
+animation:float 2s infinite ease-in-out;
+}
+
+.envelope:hover{
+transform:scale(1.1);
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+.open-btn{
+background:gold;
+border:none;
+padding:15px 35px;
+font-size:20px;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+box-shadow:0 0 20px gold;
+}
+
+.letter{
+display:none;
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 0 30px pink;
+animation:fadeIn 1s;
+max-height:80vh;
+overflow:auto;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+h1{
+color:#ff4d6d;
+}
+
+.message{
+font-size:22px;
+line-height:1.8;
+white-space:pre-line;
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>💌 A LETTER FOR YOU 💌</h1>
+<div id="cover">
 
-<div class="card">
+<div class="envelope">💌</div>
 
-<p class="final-message">
+<h1>A Special Letter For Rishu ❤️</h1>
 
-Dear Rishu ❤️,
+<p>
+Someone loves you very much...
+</p>
 
-Happy Birthday to the most wonderful person in my life.
+<button class="open-btn" onclick="openLetter()">
+💖 Open Letter
+</button>
 
-Today is your special day, but honestly,
-every day feels special because you're in my life.
+</div>
 
-Thank you for your love,
-your patience,
-your support,
-and the countless smiles you bring into my life.
+<div class="letter" id="letter">
 
-No matter what happens,
-I want you to know that you are deeply loved,
-appreciated,
-and cherished.
+<h1>💌 My Love Letter 💌</h1>
 
-I am so grateful for every memory we have made together
-and excited for all the memories yet to come.
+<div class="message">
 
-You are not just my favorite person,
-you are my comfort,
+My Love ❤️,
+
+No matter where life takes us,
+
+No matter how many birthdays come and go,
+
+There is one thing that will never change...
+
+I will always choose you.
+
+Thank you for being my safe place,
 my happiness,
-and my home.
+my best friend,
+and my favorite person.
 
-Happy Birthday, My Love ❤️
+You make ordinary moments feel magical.
+
+I hope this birthday brings you as much happiness
+as you bring into my life every day.
+
+May all your dreams come true.
+
+May your smile never fade.
+
+May this year be your best year yet.
+
+✨ Happy Birthday Jaan ✨
 
 Forever Yours,
 
-✨ Sanjh ✨
-
-</p>
+❤️ Sanjh ❤️
 
 </div>
 
-<a href="reasons.html" class="btn">
-🌟 Why I Love You
+<br><br>
+
+<a href="gallery.html"
+style="
+background:gold;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+">
+📸 Continue Our Love Story
 </a>
 
 </div>
-<script src="script.js"></script>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("cover").style.display="none";
+
+document.getElementById("letter").style.display="block";
+
+}
+
+</script>
+
 </body>
 </html>
